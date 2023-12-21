@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website for Euros 2024. Your source for tournament information.">
+    <meta name="keywords" content="Euros 2024, football, tournament">
+    <meta name="author" content="corey">
+    <title>Euros 2024</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: darkblue;
+            color: white;
+        }
+
+        header {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 19px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #FF8C00;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: darkblue;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                color: firebrick;
+                padding: 9px;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 60px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+
+        #loginForm, #signup-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        main section {
+            background-color: white;
+            color: darkblue;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Add a subtle border radius for a modern look */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease-in-out; /* Add a smooth transformation effect */
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Scale up the image on hover for a subtle effect */
+        }
+        nav img {
+            max-height: 40px; /* Set the maximum height of the image */
+            margin-right: 20px; /* Add some spacing to the right of the image */
+            background: fixed;
+            background-repeat: no-repeat;
+        }
+        section{
+            body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            text-overflow: clip;
+            image-rendering: optimizeQuality;
+            border-image-source: unset;
+        }
+        h6 {
+            color: #333; /* Text color */
+            font-family: 'Arial', sans-serif; /* Font family */
+            font-size: 1em; /* Font size */
+            font-weight: normal; /* Font weight */
+            margin-bottom: 10px; /* Bottom margin */
+        }
+
+        /* Additional styling for demonstration purposes */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        /* Styling for the heading's container (just for visual separation) */
+        .heading-container {
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-icons {
+            margin-top: 10px;
+        }
+
+        .footer-icons a {
+            margin: 0 10px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            /* Responsive Design */
+    @media only screen and (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="language-selector">
+        <label for="language">Select Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="gr">German</option>
+        </select>
+    </div>
+
+    <header>
+        <h1>Welcome to the Official Euros 2024 Website</h1>
+        <p>Euros 2024 - Your Source for Official Information</p>
+        <img src="uefa.jpg" alt="uefa logo" width="150">
+    </header>
+
+    <nav>
+        <a href="#home"><i class='bx bxs-home'></i> Home</a>
+        <a href="#inside-uefa"><i class='bx bxs-info-circle'></i> Inside UEFA</a>
+        <a href="#matches"><i class='bx bxs-football'></i> Matches</a>
+        <a href="#draws"><i class='bx bxs-trophy'></i> Draws</a>
+        <button id="loginBtn" onclick="toggleLoginForm()">Login</button>
+        <div id="loginForm" style="display: none;">
+            <!-- Your login form content goes here -->
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="button" onclick="performLogin()">Submit</button>
+        </div>
+    </nav>
+
+    <form id="registrationForm">
+        <label for="registrationUsername">Username:</label>
+        <input type="text" id="registrationUsername" required>
+
+        <label for="registrationPassword">Password:</label>
+        <input type="password" id="registrationPassword" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+
+        <button type="button" onclick="validatePassword()">Register</button>
+    </form>
+
+    <main>
+        <section id="featured">
+            <h2>Inside UEFA</h2>
+            <p>Discover the latest and most exciting news from Euros 2024.</p>
+        </section>
+
+        <section id="matches">
+            <h2>Matches</h2>
+            <div class="match-box">
+                <h3>Match 18</h3>
+                <p>man utd v west ham </p>
+                <p>date: december 23 2023</p>
+            </div>
+            <div class="match-box">
+                <h3>Match 19</h3>
+                <p>manchester united v aston villa </p>
+                <p>Date: december 26 2023</p>
+            </div>
+            <!-- Add more match content as needed -->
+        </section>
+        <section>
+           
+        </section>
+
+        <section id="draws">
+            <h2>UEFA EURO 2024 final tournament draw</h2>
+            <div class="news-article">
+                <h3>Exciting Developments in the Tournament</h3>
+                <p>exciting news coming soon.</p>
+            </div>
+            <div class="news-article">
+                <h3>Player Spotlights</h3>
+                <label for="h1"></label>
+                <p>mason greenwood<p>
+                    <img src="download (1).jpg" alt="Maon greenwood">
+                    <p>Mason Greenwood had a good start at getafe.</p>
+            </div>
+        </section>
+           <section id="manutd">
+            <h2>Manchester United</h2>
+            <img src="image.jpg" alt="Manchester United Logo" width="150">
+        
+            <p>
+                Manchester United is a professional football club based in Manchester, England. 
+                They are one of the most successful and popular football clubs in the world.
+                The club was founded in 1878 as Newton Heath LYR Football Club and changed its name to Manchester United in 1902.
+                Manchester United has a rich history and has won numerous domestic and international trophies.
+            </p>
+        </section>
+      
+        <section2>
+            <h1>Stadium</h2>
+            <p>The home stadium of West Ham is the London Stadium, located in the Queen Elizabeth Olympic Park. It has been the club's home since the 2016/2017 season.</p>
+            <img src="image2.jpg.jpg" alt="west ham">
+        </section2>
+        <section3>
+            <h2>women</h2>
+            <img src="opera.jpg" alt="hot women">
+            <p>here you go!</p>
+        </section>
+        <section4>
+            <h3>more women</h3>
+            <p2>heres more!</p2>
+            <img src="won.jpg" alt="more hot women">
+        </section>
+        <section>
+            <h4>Garnacho's biycycle kick vs everton</h4>
+            <p>Garnacho scored a worlde against everton, heres the image.</p>
+            <img src="image22.jpg" alt="garnachos biycycle kick">
+        </section>
+        <h5>champions league.</h5>
+        <p>champions league last 16</p>
+        <img src="download (2).jpg" alt="last 16">
+        <section>
+            <h6>arsenal</h6>
+            <caption>about arsenal's stadium.<br></caption>
+            <p1>Arsenal played at Highbury for over 90 years before moving to the Emirates Stadium in 2006<br> a state-of-the-art venue with a capacity of over 60,000 spectators. The Emirates Stadium has become an iconic symbol for the club.</p1><br>
+            <img src="download (3).jpg" alt="arsenal"><br>
+            <h7>clubs history</h7><b><br>
+                <p7>
+Arsenal Football Club, commonly referred to as Arsenal, is a professional football club based in Islington, London, England. Established in 1886, Arsenal has a rich and storied history, making it one of the most successful and popular football clubs in the world.<b></b>
+
+Club History:</p7><br>
+<br>
+<h8>Arsenals best player</h8><br>
+<img src="download (4) copy.jpg" alt="martin odegaard"><br>
+<caption>martin odegaard</caption>
+        </section>
+        <div class="footer">
+            <p>&copy; 2023 factsaboutfootball | Designed by <a href="#" target="_blank">digz prorlcs</a></p>
+        </div>
+    </div>
+    <p>Contact: digzprorlcs@gmail.com | Phone: +1 (123) 456-7890</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</div>
+<div class="footer">
+    <div class="footer-icons">
+        <a href="#" target="_blank"><img src="download (1).jpg" alt="Twitter"></a>
+        <a href="#" target="_blank"><img src="download (2).jpg" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="download (3).jpg" alt="LinkedIn"></a>
+        <a href="#" class="back-to-top">Back to Top</a>
+    </div>
+    
+    </main>
+<style>
+
+
+</style>
+    <script>
+        function changeLanguage() {
+            var languageSelector = document.getElementById('language');
+            var selectedLanguage = languageSelector.value;
+
+            // Example: Change header text based on the selected language
+            var header = document.querySelector('header h1');
+            if (selectedLanguage === 'en') {
+                header.textContent = "Welcome to the Official Euros 2024 Website";
+            } else if (selectedLanguage === 'fr') {
+                header.textContent = "Bienvenue sur le site officiel de l'Euros 2024";
+            }
+
+            // Add more language-specific text changes as needed
+        }
+
+
+        function toggleLoginForm() {
+            var loginForm = document.getElementById("loginForm");
+
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+            } else {
+                loginForm.style.display = "none";
+            }
+
+            // If the form is visible, focus on the username input
+            if (loginForm.style.display !== "none") {
+                document.getElementById("loginUsername").focus();
+            }
+        }
+
+        function performLogin() {
+            // Get username and password values
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+
+            // Perform your login logic here (e.g., check against stored credentials)
+            // For simplicity, let's just display an alert for successful login
+            alert("Login successful! Welcome, " + username);
+
+            // You may want to redirect the user or perform other actions after login
+
+            // Return false to prevent the form from submitting
+            return false;
+        }
+
+        function validatePassword() {
+        // Password validation logic
+        }
+            
+
+        
